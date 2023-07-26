@@ -1,5 +1,13 @@
 <?php
     $result = '無し';
+    if(arry_key_exists('act', $_POST)) {
+        $result = omikuji();
+    }
+    
+    function omikuji(){
+        $fortue =["大吉", "吉", "中吉", "小吉", "末吉", "凶"];
+        return $fortue[random_int(0, count($fortue) - 1)];
+    }
 ?>
 
 <!DOCTYPE html>
